@@ -1,0 +1,21 @@
+name: SelectClassPlugin
+version: '1.0.0'
+main: com.selectclass.SelectClassPlugin
+description: Plugin pemilihan kelas (RPL A/B/C) lewat GUI chest. Kunci setelah dipilih, hanya admin yang bisa reset. Nama kelas tampil di chat, tab list, dan (lewat PlaceholderAPI) di DiscordSRV.
+author: YourName
+api-version: '1.21'
+softdepend: [PlaceholderAPI, DiscordSRV]
+
+commands:
+  selectclass:
+    description: Membuka menu pemilihan kelas (GUI chest) / admin reset kelas
+    usage: /selectclass [reset <pemain>]
+    permission: selectclass.use
+
+permissions:
+  selectclass.use:
+    description: Izin untuk membuka menu pemilihan kelas milik sendiri
+    default: true
+  selectclass.admin:
+    description: Izin admin untuk menghapus/reset kelas pemain lain
+    default: op
